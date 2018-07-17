@@ -1,0 +1,2 @@
+# NotificationCenter
+block方式使用NSNotification，其中通知使用异步方式发送，不会阻塞线程
