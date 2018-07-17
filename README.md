@@ -9,3 +9,6 @@ block方式使用NSNotification，其中通知使用异步方式发送，不会�
     }];
 # 移除通知  页面需要移除通知不然会多次接收通知
     [[NotificationCenter defaultNotificationCenter] removeObserver];
+# 安装方式 
+pod NotificationCenter
+或者直接拖文件
