@@ -1,23 +1,19 @@
 //
-//  NotificationCenter.h
+//  NotiDefultCenter.h
 //  NotificationCenter
 //
-//  Created by HU on 2018/7/13.
-//  Copyright © 2018年 HU. All rights reserved.
+//  Created by 狄烨 . on 2018/12/13.
+//  Copyright © 2018 HU. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#ifndef NotiDefultCenter_h
+#define NotiDefultCenter_h
 
-typedef void(^Completion)(NSNotification * _Nonnull noti);
 
-@interface NotificationCenter : NSObject
+#if __has_include(<NotificationCenter/NSObject+NotificationCenter.h>)
+#import <NotificationCenter/NSObject+NotificationCenter.h>
+#else
+#import "NSObject+NotificationCenter.h"
+#endif
 
-+ (NotificationCenter *)defaultNotificationCenter;
-
-- (void)addObserverWithName:(NSString *)name callBack:(Completion)callBack;
-
-- (void)postNotificationName:(NSString *)name;
-- (void)postNotificationName:(NSString *)name object:(nullable id)anObject;
-
-- (void)removeObserver;
-@end
+#endif /* NotiDefultCenter_h */

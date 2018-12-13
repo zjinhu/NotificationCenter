@@ -14,7 +14,8 @@
 		85CAB2E020F89A5000B7E068 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85CAB2DE20F89A5000B7E068 /* LaunchScreen.storyboard */; };
 		85CAB2E320F89A5000B7E068 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 85CAB2E220F89A5000B7E068 /* main.m */; };
 		85CAB2EB20F89A7A00B7E068 /* PushViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85CAB2EA20F89A7A00B7E068 /* PushViewController.m */; };
-		85CAB2EF20F89A9C00B7E068 /* NotificationCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 85CAB2EE20F89A9C00B7E068 /* NotificationCenter.m */; };
+		85CAB2EF20F89A9C00B7E068 /* NotificationTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 85CAB2EE20F89A9C00B7E068 /* NotificationTool.m */; };
+		91AB6DBA21C22BBF00218831 /* NSObject+NotificationCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 91AB6DB921C22BBF00218831 /* NSObject+NotificationCenter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,8 +31,11 @@
 		85CAB2E220F89A5000B7E068 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		85CAB2E920F89A7A00B7E068 /* PushViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PushViewController.h; sourceTree = "<group>"; };
 		85CAB2EA20F89A7A00B7E068 /* PushViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PushViewController.m; sourceTree = "<group>"; };
-		85CAB2ED20F89A9C00B7E068 /* NotificationCenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationCenter.h; sourceTree = "<group>"; };
-		85CAB2EE20F89A9C00B7E068 /* NotificationCenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationCenter.m; sourceTree = "<group>"; };
+		85CAB2ED20F89A9C00B7E068 /* NotificationTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationTool.h; sourceTree = "<group>"; };
+		85CAB2EE20F89A9C00B7E068 /* NotificationTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationTool.m; sourceTree = "<group>"; };
+		91AB6DB821C22BBF00218831 /* NSObject+NotificationCenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+NotificationCenter.h"; sourceTree = "<group>"; };
+		91AB6DB921C22BBF00218831 /* NSObject+NotificationCenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+NotificationCenter.m"; sourceTree = "<group>"; };
+		91AB6DBB21C2302C00218831 /* NotificationCenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationCenter.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,8 +87,11 @@
 		85CAB2EC20F89A8700B7E068 /* Class */ = {
 			isa = PBXGroup;
 			children = (
-				85CAB2ED20F89A9C00B7E068 /* NotificationCenter.h */,
-				85CAB2EE20F89A9C00B7E068 /* NotificationCenter.m */,
+				85CAB2ED20F89A9C00B7E068 /* NotificationTool.h */,
+				85CAB2EE20F89A9C00B7E068 /* NotificationTool.m */,
+				91AB6DB821C22BBF00218831 /* NSObject+NotificationCenter.h */,
+				91AB6DB921C22BBF00218831 /* NSObject+NotificationCenter.m */,
+				91AB6DBB21C2302C00218831 /* NotificationCenter.h */,
 			);
 			path = Class;
 			sourceTree = "<group>";
@@ -160,10 +167,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				85CAB2D820F89A4E00B7E068 /* ViewController.m in Sources */,
-				85CAB2EF20F89A9C00B7E068 /* NotificationCenter.m in Sources */,
+				85CAB2EF20F89A9C00B7E068 /* NotificationTool.m in Sources */,
 				85CAB2E320F89A5000B7E068 /* main.m in Sources */,
 				85CAB2EB20F89A7A00B7E068 /* PushViewController.m in Sources */,
 				85CAB2D520F89A4E00B7E068 /* AppDelegate.m in Sources */,
+				91AB6DBA21C22BBF00218831 /* NSObject+NotificationCenter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,7 +1,7 @@
  
 Pod::Spec.new do |s|
   s.name             = 'NotificationCenter'
-  s.version          = '0.1.0'
+  s.version          = '1.0.0'
   s.summary          = 'block通知中心.'
  
   s.description      = <<-DESC
@@ -15,8 +15,10 @@ Pod::Spec.new do |s|
  
   s.platform         = :ios, "9.0"
   s.ios.deployment_target = "9.0"
-  s.source_files = 'NotificationCenter/NotificationCenter/Class/**/*.{h,m}'
+
   s.frameworks   = "UIKit", "Foundation" #支持的框架
   s.requires_arc        = true
 
+  s.source_files          = 'NotificationCenter/NotificationCenter/Class/**/*' 
+  s.public_header_files   = "NotificationCenter/NotificationCenter/Class/NotificationCenter.h"
 end

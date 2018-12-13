@@ -8,28 +8,30 @@
 
 #import "PushViewController.h"
 #import "NotificationCenter.h"
-
 @interface PushViewController ()
 
 @end
 
 @implementation PushViewController
 
+-(void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    [self.defultCenter postNotificationName:@"name" object:@"11111111111"];
+    
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    [[NotificationCenter defaultNotificationCenter] postNotificationName:@"name" object:@"11111111111"];
+    self.view.backgroundColor = UIColor.whiteColor;
     
     //添加接受通知方法
-    [[NotificationCenter defaultNotificationCenter] addObserverWithName:@"name" callBack:^(NSNotification * _Nonnull noti) {
+    [self.defultCenter addObserverWithName:@"name" callBack:^(NSNotification * _Nonnull noti) {
         NSLog(@"%@",noti.object);
     }];
     // Do any additional setup after loading the view.
 }
 
 -(void)dealloc{
-    //可以在视图退出的时候添加移除通知的方法,防止不移除通知下次再进来会收到两次通知
-    [[NotificationCenter defaultNotificationCenter] removeObserver];
+
 }
 
 - (void)didReceiveMemoryWarning {
