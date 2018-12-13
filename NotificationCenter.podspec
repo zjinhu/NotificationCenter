@@ -20,5 +20,5 @@ Pod::Spec.new do |s|
   s.requires_arc        = true
 
   s.source_files          = 'NotificationCenter/NotificationCenter/Class/**/*' 
-  s.public_header_files   = "NotificationCenter/NotificationCenter/Class/NotificationCenter.h"
+  s.public_header_files   = "NotificationCenter/NotificationCenter/Class/*.h"
 end
