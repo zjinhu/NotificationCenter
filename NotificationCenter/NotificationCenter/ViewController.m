@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "PushViewController.h"
+#import "NotificationCenter.h"
 @interface ViewController ()
 
 @end
@@ -22,6 +23,9 @@
     [btn addTarget:self action:@selector(clickItem:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:btn];
     // Do any additional setup after loading the view, typically from a nib.
+    [self.defultCenter addObserverWithName:@"name" callBack:^(NSNotification * _Nonnull noti) {
+        NSLog(@"%@",noti.object);
+    }];
 }
 
 - (void)clickItem:(UIButton *)sender {
@@ -34,5 +38,8 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(void)dealloc{
+    
+}
 
 @end
