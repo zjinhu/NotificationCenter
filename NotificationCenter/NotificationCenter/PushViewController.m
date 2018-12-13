@@ -16,7 +16,7 @@
 
 -(void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
-    [self.defultCenter postNotificationName:@"name" object:@"11111111111"];
+    [self.defaultNotiCenter postNotificationName:@"name" object:@"11111111111"];
     
 }
 - (void)viewDidLoad {
@@ -24,7 +24,7 @@
     self.view.backgroundColor = UIColor.whiteColor;
     
     //添加接受通知方法
-    [self.defultCenter addObserverWithName:@"name" callBack:^(NSNotification * _Nonnull noti) {
+    [self.defaultNotiCenter addObserverWithName:@"name" callBack:^(NSNotification * _Nonnull noti) {
         NSLog(@"%@",noti.object);
     }];
     // Do any additional setup after loading the view.

@@ -1,7 +1,7 @@
  
 Pod::Spec.new do |s|
   s.name             = 'NotificationCenter'
-  s.version          = '1.0.0'
+  s.version          = '1.1.0'
   s.summary          = 'block通知中心.'
  
   s.description      = <<-DESC

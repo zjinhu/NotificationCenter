@@ -11,16 +11,16 @@
 static const void *NotificationCenterKey = &NotificationCenterKey;
 
 @implementation NSObject (NotificationCenter)
-- (void)setDefultCenter:(NotificationTool *)defultCenter{
-    objc_setAssociatedObject(self, NotificationCenterKey, defultCenter, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+- (void)setDefaultNotiCenter:(NotificationTool *)defaultNotiCenter{
+    objc_setAssociatedObject(self, NotificationCenterKey, defaultNotiCenter, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
-- (NotificationTool *)defultCenter{
-    NotificationTool *defultCenter = objc_getAssociatedObject(self, NotificationCenterKey);
-    if (defultCenter==nil) {
-        defultCenter = [[NotificationTool alloc] init];
-        self.defultCenter = defultCenter;
+- (NotificationTool *)defaultNotiCenter{
+    NotificationTool *defaultNotiCenter = objc_getAssociatedObject(self, NotificationCenterKey);
+    if (!defaultNotiCenter) {
+        defaultNotiCenter = [[NotificationTool alloc] init];
+        self.defaultNotiCenter = defaultNotiCenter;
     }
-    return defultCenter;
+    return defaultNotiCenter;
 }
 @end

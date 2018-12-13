@@ -11,7 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface NSObject (NotificationCenter)
-@property (nonatomic, strong) NotificationTool *defultCenter;
+@property (nonatomic, strong) NotificationTool *defaultNotiCenter;
 @end
 
 NS_ASSUME_NONNULL_END

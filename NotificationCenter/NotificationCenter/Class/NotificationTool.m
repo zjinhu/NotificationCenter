@@ -10,14 +10,13 @@
 
 @interface NotificationTool()
 @property (nonatomic, strong) NSMutableDictionary *observers;
-
 @end
 
 @implementation NotificationTool
 
 - (NSMutableDictionary *)observers {
-    if (_observers == nil) {
-        self.observers = [NSMutableDictionary dictionary];
+    if (!_observers) {
+        _observers = [NSMutableDictionary dictionary];
     }
     return _observers;
 }
@@ -47,11 +46,9 @@
 }
 
 - (void)removeAllObserver {
-    if (self.observers && self.observers.count) {
-        for (NSString *name in self.observers.allKeys) {
-            [self removeObserverWithName:name];
-        }
-    }
+    [self.observers.allKeys enumerateObjectsUsingBlock:^(NSString *name, NSUInteger idx, BOOL * _Nonnull stop) {
+        [self removeObserverWithName:name];
+    }];
 }
 
 - (void)removeObserverWithName:(NSString *)name {
@@ -62,9 +59,9 @@
 }
 
 - (void)removeObserverWithNames:(NSArray<NSString *> *)names {
-    for (NSString *name in names) {
+    [names enumerateObjectsUsingBlock:^(NSString *name, NSUInteger idx, BOOL * _Nonnull stop) {
         [self removeObserverWithName:name];
-    }
+    }];
 }
 
 -(void)dealloc {

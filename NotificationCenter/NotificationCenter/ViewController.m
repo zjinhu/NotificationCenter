@@ -23,8 +23,8 @@
     [btn addTarget:self action:@selector(clickItem:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:btn];
     // Do any additional setup after loading the view, typically from a nib.
-    [self.defultCenter addObserverWithName:@"name" callBack:^(NSNotification * _Nonnull noti) {
-        NSLog(@"%@",noti.object);
+    [self.defaultNotiCenter addObserverWithName:@"name" callBack:^(NSNotification * _Nonnull noti) {
+        NSLog(@"--------------%@",noti.object);
     }];
 }
 
