@@ -24,7 +24,7 @@
     self.view.backgroundColor = UIColor.whiteColor;
     
     //添加接受通知方法
-    [self.defaultNotiCenter addObserverWithName:@"name" callBack:^(NSNotification * _Nonnull noti) {
+    [self.defaultNotiCenter addObserverWithNames:@[@"name",@"name",@"name",@"name",@"name"] callBack:^(NSNotification * _Nonnull noti) {
         NSLog(@"%@",noti.object);
     }];
     // Do any additional setup after loading the view.

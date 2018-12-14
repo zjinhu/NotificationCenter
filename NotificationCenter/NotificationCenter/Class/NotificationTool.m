@@ -25,6 +25,7 @@
     [names enumerateObjectsUsingBlock:^(NSString *name, NSUInteger idx, BOOL * _Nonnull stop) {
         [self addObserverWithName:name callBack:callBack];
     }];
+     NSLog(@"%@",self.observers);
 }
 
 - (void)addObserverWithName:(NSString *)name callBack:(Completion)callBack{
@@ -36,7 +37,7 @@
 
 - (void)postNotificationName:(NSString *)name{
     //也可以使用同步通知
-    //    [_notificationCenter postNotificationName:name object:nil userInfo:nil];
+    //    [[NSNotificationCenter defaultCenter] postNotificationName:name object:nil userInfo:nil];
     //使用异步通知
     [[NSNotificationQueue defaultQueue] enqueueNotification:[NSNotification notificationWithName:name object:nil] postingStyle:NSPostWhenIdle coalesceMask:NSNotificationCoalescingOnName forModes:nil];
 }
